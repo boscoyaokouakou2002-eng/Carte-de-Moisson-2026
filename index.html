@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Carte de la Moisson — INP-HB Centre</title>
+<meta name="description" content="Suivi de l'évangélisation des chambres du campus INP-HB Centre">
+<meta name="theme-color" content="#7c3f2b">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="row">
+    <div>
+      <div class="title">🌾 Carte de la Moisson</div>
+      <div class="sub" id="userSub">INP-HB Centre</div>
+    </div>
+    <div class="sync-pill" id="syncPill">
+      <div class="dot green" id="syncDot"></div>
+      <span id="syncText">Synchronisé</span>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<div class="toast" id="toast"></div>
+
+<div class="install-banner" id="installBanner">
+  <span>📲 Installer l'application sur cet appareil</span>
+  <span style="display:flex; gap:6px">
+    <button id="dismissBtn" style="background:transparent;color:#fff;border:1px solid #fff">Plus tard</button>
+    <button id="installBtn">Installer</button>
+  </span>
+</div>
+
+<nav class="bottom">
+  <button class="tab active" data-tab="dashboard"><span class="ic">🏠</span>Accueil</button>
+  <button class="tab" data-tab="buildings"><span class="ic">🏢</span>Bâtiments</button>
+  <button class="tab" data-tab="remaining"><span class="ic">📋</span>Restantes</button>
+  <button class="tab" data-tab="stats"><span class="ic">📊</span>Stats</button>
+  <button class="tab" data-tab="admin"><span class="ic">⚙️</span>Admin</button>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
